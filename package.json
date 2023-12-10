@@ -7,6 +7,7 @@
     "dev:clean": "rm -rf ./dist",
     "dev:tsc": "tsc -w",
     "dev:watch": "node --watch dist/index.js",
+    "dev:once": "node dist/index.js",
     "test": "jest",
     "test:watch": "jest --watchAll",
     "test:coverage": "jest --coverage",
