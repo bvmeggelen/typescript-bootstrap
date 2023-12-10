@@ -1,0 +1,55 @@
+{
+    "extends": [
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:@typescript-eslint/stylistic-type-checked"
+    ],
+    "parserOptions": {
+        "project": "./tsconfig.json",
+        "tsconfigRootDir": "./"
+    },
+    "rules": {
+        "semi": ["error", "always"],
+        "quotes": ["error", "single", { "avoidEscape": true }],
+        "indent": ["error", 4],
+        "one-var": ["error", "never"],
+        "no-else-return": "error",
+        "linebreak-style": ["error", "unix"],
+        "newline-before-return": "error",
+        "padding-line-between-statements": [
+            "error",
+            { "blankLine": "always", "prev": "*", "next": "return" }
+        ],
+        "curly": ["error", "multi-or-nest"],
+        "object-curly-spacing": ["error", "always"],
+        "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1 }],
+        "eol-last": ["error", "always"],
+        "comma-dangle": ["error", "always-multiline"],
+        "quote-props": ["error", "as-needed"],
+        "no-trailing-spaces": "error",
+        "key-spacing": ["error", { "beforeColon": false }],
+        "keyword-spacing": ["error", { "before": true, "after": true }],
+        "no-empty": ["error", { "allowEmptyCatch": false }],
+        "func-call-spacing": ["error", "never"],
+        "space-unary-ops": ["error", { "words": true, "nonwords": false }],
+
+        "@typescript-eslint/explicit-function-return-type": "error",
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": "error",
+        "@typescript-eslint/no-explicit-any": "error",
+        "@typescript-eslint/no-floating-promises": "error",
+        "@typescript-eslint/no-require-imports": "error",
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": "error",
+        "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+        "@typescript-eslint/type-annotation-spacing": ["error", {
+          "before": false,
+          "after": true,
+          "overrides": {
+            "arrow": {
+              "before": true,
+              "after": true
+            }
+          }
+        }]
+    }
+}

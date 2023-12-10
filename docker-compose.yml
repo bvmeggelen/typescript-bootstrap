@@ -1,0 +1,19 @@
+version: '3'
+
+networks:
+  typescript-bootstrap:
+
+services:
+  bootstrap:
+    image: typescript-bootstrap:dev
+    container_name: bootstrap
+    networks:
+      - typescript-bootstrap
+    volumes:
+      - "./:/app"
+    environment:
+      NODE_ENV: development
+    command:
+      - tail
+      - -f
+      - /dev/null
